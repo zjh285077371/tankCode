@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坦克大战</title>
+    <style>
+        #battleground table{
+            border-collapse: collapse;
+        }
+        #battleground table td {
+            border: 1px solid #808080;
+            width: 10px;
+            height: 10px;
+            font-size: 0;
+            line-height: 0;
+            overflow: hidden;
+            background-color: aquamarine;
+        }
+        #battleground table .tank {
+            background-color: green;
+        }
+        #battleground table .bullet {
+            background-color: red;
+        }
+        #battleground table .enemy {
+            background-color: indigo;
+        }
+        /*#battleground table .food {*/
+            /*background-color: blue;*/
+        /*}*/
+    </style>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- 战场 -->
+    <div id="battleground"></div>
+    <button id="start">开始</button>
+</body>
+<script src="main.js"></script>
+<script src="tank.js"></script>
+<script src="enemy.js"></script>
+<script>
+    $("#start").click(function(){
+        tankJs.tank.start();
+    })
+</script>
+</html>
